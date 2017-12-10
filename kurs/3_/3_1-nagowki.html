@@ -15,7 +15,7 @@
             //write("<h2>Wita Janusz</h2>") - metoda
             //"<h2>Wita Janusz</h2>" - parametr
         </script>
-            <h1> Systemy liczbowe</h1>
+         <h1> Systemy liczbowe</h1>
         <div id="wynik"></div>
         <div id="a">a</div>
         <div id="b">b</div>
@@ -59,7 +59,7 @@
          Sredni wiek wyswietl w kolorze czerwonym a pozostale dane w kolorze #FF07
 */
 
-        var janusz = prompt ("Podaj swoj wiek Janszu");
+    /*    var janusz = prompt ("Podaj swoj wiek Janszu");
         janusz = parseFloat(janusz);
         var agata = prompt ("podaj swoj wiek Agato");
         agata = parseFloat(agata);
@@ -75,7 +75,41 @@
             b.innerHTML = Swiek;
             a.style.color = "#ff07b2";
             c.style.color = "#ff07b2";
-            b.style.color = "red";
+            b.style.color = "red"; */
+
+  //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+    // konkatenacja +      w javaScript
+    // konkatenacja .      w php
+
+     /*       var x = prompt("podaj x"); // 2  //2.5
+            var y = prompt("podaj y"); // 3  //2.3
+            var z = x + y;
+            console.log(z); //23   //2.53
+
+          /*  x = parseInt(x);
+            y = parseInt(y);
+            z = x + y;
+            console.log(z); // 5  // 5
+         */
+
+        /*  x = parseFloat(x);
+            y = parseFloat(y);
+            z = x + y;
+            console.log(z);  //5.5 */
+
+//yxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+            var tekst = parseFloat(prompt("podaj wiek"));
+            console.log(typeof(tekst));
+            //document.write(tekst);
+            //po podaniu wartosci "janusz" wyswieta sie Nan - Not a Number
+
+           if(isNaNf(tekst)){
+               document.write("podales bledne dane!");
+           }else{
+               document.write("twoje wiek " + tekst);
+           }
         </script>
 
     </body>
