@@ -1,0 +1,71 @@
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+	<title>wizytowka</title>
+	<meta name="description" content="moja wizytowka" />
+	<meta name="keywords" content="wizytowka" />
+	<meta http-equiv="X-UA-Compatibe" content="IE=edge, chrome=1" />
+
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+</head>
+
+<body>
+<div id ="container">
+
+	<div id="header"> header </div>
+	<div class="menu">
+
+		<div class="button"> aktuanosci </div>
+		<div class="button"> kontent </div>
+		<div class="button"> galeria </div>
+		<div class="button"> kontakt </div>
+
+		<div style="clear:both;"></div>
+	</div>
+
+	<div id="big">
+
+		<span class="tekst">
+	<div id="sidebl"> lewe menu </div>
+	<div id="mid">
+		<div id="bcontent"> bcontent </div>
+		<div id="content"> content </div>
+		<div id="acontent"> acontent </div>
+		</div>
+	<div id="sidebr"> prawe menu </div>
+		</span>
+	</div>
+	<div id="footer"> footer </div>
+
+</div>
+
+
+<script src="jquery-1.11.3.min.js"></script>
+
+	<script>
+
+	$(document).ready(function() {
+	var NavY = $('.menu').offset().top;
+
+	var stickyNav = function(){
+	var ScrollY = $(window).scrollTop();
+
+	if (ScrollY > NavY) {
+		$('.menu').addClass('sticky');
+	} else {
+		$('.menu').removeClass('sticky');
+	}
+	};
+
+	stickyNav();
+
+	$(window).scroll(function() {
+		stickyNav();
+	});
+	});
+
+</script>
+
+</body>
+</html>
