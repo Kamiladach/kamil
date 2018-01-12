@@ -1,0 +1,39 @@
+body {
+    width: 100%;
+}
+#baner {
+
+background-color: #45517d;
+    color: white;
+    font-size: 120%;
+    text-align: right;
+    height: 60px;
+}
+#panelL {
+    background-color: #61b2ec;
+    width: 40%;
+    height: 500px;
+    float: left;
+}
+#panelP {
+    background-color: #8ec9f2;
+    width: 60%;
+    height: 500px;
+    float:left;
+}
+#stopka {
+    background-color: #45517d;
+    color: white;
+    font-size: 150%;
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+
+a {
+    color: orange;
+    }
+a:visited {
+    color: green;
+}
