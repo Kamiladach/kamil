@@ -22,7 +22,7 @@
           </form>
             <br>
             <button id="dodawanie">Dodawanie</button> &nbsp;
-            <button id="odejmowanie">Odemowanie</button> &nbsp;
+            <button id="odejmowanie">Odejmowanie</button> &nbsp;
             <button id="mnozenie">Mnozenie</button> &nbsp;
             <button id="dzielenie">Dzielenie</button> <br><br>
             <div id="komunikat"></div>
@@ -31,7 +31,7 @@
             var elPierwsza = document.getElementById("pierwszaLiczba");
             var elDruga = document.getElementById("drugaLiczba");
             var elDodawanie = document.getElementById("dodawanie");
-            var elOdemowanie = document.getElementById("odemowanie");
+            var elOdejmowanie = document.getElementById("odejmowanie");
             var elMnozenie = document.getElementById("mnozenie");
             var elDzielenie = document.getElementById("dzielenie");
             var elKomunikat = document.getElementById("komunikat");
@@ -39,6 +39,10 @@
             var dlugosc2;
             var wartosc1;
             var wartosc2;
+            var dodawanie;
+            var odjac;
+            var mnozenie;
+            var dzielenie;
 
                 elDodawanie.onclick = function () {
                    /* var x = elPierwsza.value;
@@ -47,11 +51,69 @@
                     console.log(dlugosc); */
 
                     wartosc1 = elPierwsza.value;
+                    wartosc1 = parseFloat(wartosc1);
                     dlugosc1 = wartosc1.length;
-                    if(dlugosc1 == 0 ) {
+                    wartosc2 = elDruga.value;
+                    wartosc2 = parseFloat(wartosc2);
+                    dlugosc2 = wartosc2.length;
+                    if(dlugosc1 == 0 || dlugosc2 == 0) {
                         elKomunikat.innerHTML= "prosze uzupelnic obje liczby";
                     } else {
-                        elKomunikat.innerHTML= "";
+                       // console.log(typeof(wartosc1)); sprawdzanie typu danych
+                        dodawanie = wartosc1 + wartosc2;
+                        elKomunikat.innerHTML= "suma wynosi: " + dodaj;
+                    }
+                }
+                elDzielenie.onclick = function (){
+                     wartosc1 = elPierwsza.value;
+                    wartosc1 = parseFloat(wartosc1);
+                    dlugosc1 = wartosc1.length;
+                    wartosc2 = elDruga.value;
+                    wartosc2 = parseFloat(wartosc2);
+                    dlugosc2 = wartosc2.length;
+                    if(dlugosc1 == 0 || dlugosc2 == 0) {
+                        elKomunikat.innerHTML= "prosze uzupelnic obje liczby";
+                    } else {
+
+                        if(wartosc2 == 0) {
+                        elKomunikat.innerHTML= "nie wolno dzielic przez 0";
+                    } else {
+                        dzielenie = wartosc1 / wartosc2;
+                        elKomunikat.innerHTML= "Iloraz wynosi: " + dzielenie;
+                    }
+                    }
+                }
+                     elOdejmowanie.onclick = function () {
+                    wartosc1 = elPierwsza.value;
+                    //wartosc1 = parseInt(wartosc1);
+                    wartosc1 = parseFloat(wartosc1);
+                    dlugosc1 = wartosc1.length;
+                    wartosc2 = elDruga.value;
+                    //wartosc2 = parseInt(wartosc2);
+                    wartosc2 = parseFloat(wartosc2);
+                    dlugosc2 = wartosc2.length;
+                    if(dlugosc1 == 0 || dlugosc2 == 0) {
+                        elKomunikat.innerHTML= "prosze uzupelnic obje liczby";
+                    } else {
+
+                        odjac = wartosc1 - wartosc2;
+                        elKomunikat.innerHTML= "roznica wynosi: " + odjac;
+                    }
+                }
+
+                     elMnozenie.onclick = function () {
+                    wartosc1 = elPierwsza.value;
+                    wartosc1 = parseFloat(wartosc1);
+                    dlugosc1 = wartosc1.length;
+                    wartosc2 = elDruga.value;
+                    wartosc2 = parseFloat(wartosc2);
+                    dlugosc2 = wartosc2.length;
+                    if(dlugosc1 == 0 || dlugosc2 == 0) {
+                        elKomunikat.innerHTML= "prosze uzupelnic obje liczby";
+                    } else {
+
+                        mnozenie = wartosc1 * wartosc2;
+                        elKomunikat.innerHTML= "Iloczyn wynosi: " + mnozenie;
                     }
                 }
         </script>
