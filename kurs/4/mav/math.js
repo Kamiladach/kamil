@@ -65,6 +65,9 @@ console.log(losuj1); */
 
 //zad.dom.
 //wylosuj liczby z przedzialu 15-25
+
+var losuj2 = Math.floor(Math.random() * 11 + 15);
+console.log(losuj2);
 //*******************************************************************
 
 
@@ -80,6 +83,6 @@ elPrzycisk.onclick=function() {
         elWynik.innerHTML="Wybrales nic"
             }
     else{
-        elWynik.innerHTML="wybierz jedno pole!";
+        elWynik.innerHTML="wybierz jedno pole radio!";
         }
      }
