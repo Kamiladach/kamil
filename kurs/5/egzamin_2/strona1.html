@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Proste dzialania</title>
+</head>
+    <body>
+        <div id="baner">
+        <a href="index.html"> <img src="baner.jpg"></a>
+        </div>
+        <div id="menu" >
+        Menu<br>
+        - <a href="strona1.html">proste dzialania</a><br>
+        - <a href="strona2.html">potegowanie</a>
+        </div>
+        <div id="tresc">
+            <h1>PROSTE DZIALANIA</h1>
+            <form>
+            podaj pierwsza liczbe: <input type="number" id="pierwszaLiczba"><br><br>
+            podaj druga liczbe: <input type="number" id="drugaLiczba"><br>
+          </form>
+            <br>
+            <button id="dodawanie">Dodawanie</button> &nbsp;
+            <button id="odejmowanie">Odemowanie</button> &nbsp;
+            <button id="mnozenie">Mnozenie</button> &nbsp;
+            <button id="dzielenie">Dzielenie</button> <br><br>
+            <div id="komunikat"></div>
+            </div>
+            <script>
+            var elPierwsza = document.getElementById("pierwszaLiczba");
+            var elDruga = document.getElementById("drugaLiczba");
+            var elDodawanie = document.getElementById("dodawanie");
+            var elOdemowanie = document.getElementById("odemowanie");
+            var elMnozenie = document.getElementById("mnozenie");
+            var elDzielenie = document.getElementById("dzielenie");
+            var elKomunikat = document.getElementById("komunikat");
+            var dlugosc1;
+            var dlugosc2;
+            var wartosc1;
+            var wartosc2;
+
+                elDodawanie.onclick = function () {
+                   /* var x = elPierwsza.value;
+                    var dlugosc = x.length;
+                    console.log(x);
+                    console.log(dlugosc); */
+
+                    wartosc1 = elPierwsza.value;
+                    dlugosc1 = wartosc1.length;
+                    if(dlugosc1 == 0 ) {
+                        elKomunikat.innerHTML= "prosze uzupelnic obje liczby";
+                    } else {
+                        elKomunikat.innerHTML= "";
+                    }
+                }
+        </script>
+
+    </body>
+</html>
