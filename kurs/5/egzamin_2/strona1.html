@@ -6,6 +6,7 @@
     <title>Proste dzialania</title>
 </head>
     <body>
+        <!-- Arkusz E.14-01-15.01-->
         <div id="baner">
         <a href="index.html"> <img src="baner.jpg"></a>
         </div>
@@ -79,7 +80,8 @@
                         elKomunikat.innerHTML= "nie wolno dzielic przez 0";
                     } else {
                         dzielenie = wartosc1 / wartosc2;
-                        elKomunikat.innerHTML= "Iloraz wynosi: " + dzielenie;
+                        elKomunikat.innerHTML= "Iloraz wynosi: " + dzielenie.toFixed(2);
+                        //dzielenie = dzielenie.toFixed(2);
                     }
                     }
                 }
@@ -98,6 +100,7 @@
 
                         odjac = wartosc1 - wartosc2;
                         elKomunikat.innerHTML= "roznica wynosi: " + odjac;
+
                     }
                 }
 
