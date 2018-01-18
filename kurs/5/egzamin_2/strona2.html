@@ -27,9 +27,18 @@
             var elWykladnik = document.getElementById("wykladnik");
             var elPotegowanie = document.getElementById("potegowanie");
             var elKomunikat = document.getElementById("komunikat");
+            var war1;
+            var war2;
+            var potegowanie;
+            var dlugosc1;
+            var dlugosc2;
 
                elPotegowanie.onclick = function () {
                    //zadanie domowe
+
+                potegowanie = elPodstawa * elWykladnik; //math.pow(elPodstawa,elWykladnik);
+
+                   elKomunikat.innerHTML="Suma wynosi: " + potegowanie;
                }
             </script>
         </div>
