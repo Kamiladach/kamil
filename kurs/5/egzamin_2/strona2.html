@@ -29,16 +29,21 @@
             var elKomunikat = document.getElementById("komunikat");
             var war1;
             var war2;
-            var potegowanie;
+            var pot;
             var dlugosc1;
             var dlugosc2;
 
                elPotegowanie.onclick = function () {
                    //zadanie domowe
+                  /* war1 = elPodstawa.value;
+                    war1 = parseFloat(war1);
+                    dlugosc1 = war1.length;
+                    war2 = elWykladnik.value;
+                    wartosc2 = parseFloat(war2);
+                    dlugosc2 = war2.length; */
+                pot = elPodstawa * elWykladnik; //math.pow(elPodstawa,elWykladnik);
 
-                potegowanie = elPodstawa * elWykladnik; //math.pow(elPodstawa,elWykladnik);
-
-                   elKomunikat.innerHTML="Suma wynosi: " + potegowanie;
+                   elKomunikat.innerHTML="Potega wynosi: " + pot;
                }
             </script>
         </div>
