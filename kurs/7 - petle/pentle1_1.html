@@ -34,11 +34,13 @@
             przycisk.addEventListener("click",sprawdzHasla);
             
             var proby = document.getElementById("proby");
-            var licznik =2;
+            var licznik =3;
+            h2 = "pomelo";
             do{
-                proby.innerHTML = "Masz " + licznik + " proby";
+                var h1 = prompt("podaj haslo");
+                proby.innerHTML = "Masz " + licznik + " proby";// tu ma byc funkcja
                 licznik--;
-            }while(licznik>0)
+            }while(licznik>0 && h1!=h2)
                 
                 //zad.dom
                 //uzytkownik ma 3 proby na odgadniecie hasla, po 3 nieudanej probie blokwae sa pola do wpisywania hasel, oraz wyswietlany est kominikat o 3 nieudanych probach.
