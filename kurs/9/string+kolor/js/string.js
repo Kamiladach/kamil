@@ -40,7 +40,9 @@ var minimum;
 var poprawneImie;
 var poprawneNazwisko;
 var elPozycja = document.getElementById("pozycja");
-var dlugoscNazwiska, pozycja;
+var dlugoscNazwiska, pozycja, color;
+var elKolor = document.getElementById("kolor");
+
 
 function zamienImie(){
     imie=elImie.value;
@@ -82,6 +84,11 @@ function pozycja(){
 
 }
 
+function zmienKolor(){
+    kolor = elKolor.value;
+    elKomunikat2.style.color = kolor;
+}
+
 elSuwak.disabled = true;
 elSuwak.value = "0";
 elPozycja.innerHTML = "pozycja suwaka: " + elSuwak.value;
@@ -95,10 +102,12 @@ function wycinanie(){
     elKomunikat2.innerHTML = nazwisko;
 }
 
+
 elSuwak.addEventListener("change", pozycja);
 elPrzycisk.addEventListener("click", zamienImie);
 elPrzycisk1.addEventListener("click", wycinanie);
 elNazwisko.addEventListener("keyup", blokuj);
+elKolor.addEventListener("change", zmienKolor);
 
 //**************************************** substr ***********************************************
 
