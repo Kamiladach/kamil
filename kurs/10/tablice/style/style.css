@@ -1,0 +1,12 @@
+body {
+    background-color: aquamarine;
+}
+#okrag{
+    list-style: circle;
+}
+#kwadrat{
+    list-style: square;
+}
+#pilka{
+      list-style-image: url(../jpg/pilka.png);
+}
