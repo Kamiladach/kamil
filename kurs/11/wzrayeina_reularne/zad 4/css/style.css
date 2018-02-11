@@ -1,0 +1,16 @@
+.poprawne{
+    background-color: chartreuse;
+    border: 10;
+    margin: 10px;
+    text-align: center;
+    width: 120px;
+    border-radius: 8px;    
+}
+.niepoprawne{
+    background-color: red;
+    border: 10;
+    margin: 10px;
+    text-align: center;
+    width: 120px;
+    border-radius: 8px;    
+}
