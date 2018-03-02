@@ -1,0 +1,96 @@
+
+
+#lewy  {
+    background-color: #669999;
+    width: 30%;
+    float: left;
+    height: 600px;
+    text-align: center;
+    }
+#srodek {
+    width: 40%;
+    float: left;
+    text-align: center;
+    height: 600px;
+    background-color: #99cccc;
+}
+
+#prawy  {
+    background-color: #669999;
+    width: 30%;
+    float: left;
+    height: 600px;
+    }
+#tabela, td, th {
+    border: solid 1px green;
+    text-align: center;
+}
+#przycisk {
+    border-style: none;
+    margin: 10px;
+    background-color: green;
+    color: white;
+    font-family: fantasy;
+}
+#baner {
+    background-color: #009999;
+    width: 100%;
+    color: white;
+    height: 230px;
+    float: left;
+}
+
+#obrazek {
+    margin-top: 10px;
+    width: 25%;
+    height: 60px;
+    float: left;
+    text-align: center;
+    
+}
+#info {
+    font-family: "arial";
+    background-color: #009999;
+    color: white;
+    width:  25%;
+    height: 70px;
+    text-align: center;
+    float: left;
+    margin-top: 10px;
+}#info2 {
+    font-family: "arial";
+    background-color: #009999;
+    color: white;
+    width:  25%;
+    height: 70px;
+    text-align: center;
+    float: left;
+    margin-top: 10px;
+}#info3 {
+    font-family: "arial";
+    background-color: #009999;
+    color: white;
+    width:  25%;
+    height: 70px;
+    text-align: center;
+    float: left;
+    margin-top: 10px;
+}
+
+#stopka {
+    background-color: #009999;
+    color: white;
+    float: left;
+    text-align: right;
+    width: 100%;
+}
+#nalowek {
+    
+    background-color: #009999;
+    color: white;
+    width:  100%;
+    height: 80px;
+    text-align: center;
+    float: left;
+    
+}

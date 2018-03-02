@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portal ogloszeniowy</title>
+    <link rel="stylesheet" href="1.css">
+</head>
+<body>
+    <header id="baner">
+   <div id="nalowek">Portal ogloszeniowy</div>
+   <div id="obrazek"><img id="zdjecie" src="logo.jpg"></div>
+   <div id="info">adres<br>ul.Morska 45 Gdynia</div>
+   <div id="info2">telefon<br>601601601</div>
+   <div id="info3">e-mail<br>ogolszenia@poczta.pl</div>
+    </header>
+   
+   
+    <div id="lewy">
+        <h1>Ceny ogloszen</h1>
+        <table id="tabela">
+              <tr>
+    <th>Liczba ogloszen</th>
+    <th>Cena ogloszenia</th> 
+    <th>Bonus</th>
+  </tr>
+  <tr>
+    <td>1 -50</td>
+    <td>2 PLN</td> 
+    <td rowspan="2">Subskrypcja newslettera to upust 0.20 PLN na Ogloszenie</td>
+  </tr>
+  <tr>
+    <td>51 i wiecej</td>
+    <td>1 PLN</td> 
+    
+  </tr>
+        </table>
+    </div>
+    <div id="srodek"><img id="zdjecie" src="skoczek.jpg"></div>
+    <div id="prawy">
+        <h2>ILe kosztue ogloszenie?</h2>
+        poda liczbe oglosze: <br>
+        <input type="number" id="liczba"><br>
+        <input type="checkbox" id="upust">
+        Policz upust na newsletter<br>
+        <button id="przycisk">Oblicz</button>
+        <div id="koszt"></div>
+    </div>
+    <script>
+        var elPrzycisk = document.getElementById("przycisk");
+        var elLiczba = document.getElementById("liczba");
+        var elUpust = document.getElementById("upust");
+        
+        
+    function oblicz(){
+       var liczba = elLiczba.value;
+        var cena;
+        if(liczba >= 1 && liczba <=50) {
+         if(elUpust.checked){
+             cena = 1.8 * liczba;
+         }else{
+          cena = 2 * liczba; 
+         }
+        } else if(liczba >= 51){
+            if(elUpust.checked){
+             cena = 0.80 * liczba;
+         }else{
+          cena = 1 * liczba; 
+         }
+        }
+        //cena = cena.toFixed(2);
+        koszt.innerHTML = "koszt oglocze: " + cena + "PLN";
+    }
+        
+        elPrzycisk.addEventListener("click",oblicz);
+    </script>
+    
+    <footer id="stopka">moj pesel</footer>
+</body>
+</html>
