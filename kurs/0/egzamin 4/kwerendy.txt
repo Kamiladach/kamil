@@ -1,0 +1,19 @@
+zapytanie 1: SELECT `id_ogloszenie`, `tytul`, `tresc` FROM `ogloszenie`;
+
+zapytanie 2: SELECT uzytkownik.telefon FROM ogloszenie INNER JOIN uzytkownik ON ogloszenie.id_ogloszenie=uzytkownik.id_uzytkownik WHERE id_ogloszenie='1';
+
+zad3: CREATE USER 'janusz'@'localhost' IDENTIFIED BY 'qwerty'
+
+zad 4: GRANT SELECT, DELETE ON  `oloszenia1`.`ogloszenie` TO 'moderator1'@'localhost';
+
+
+zad dodatkowe Joanna:
+GRANT SELECT, INSERT, UPDATE ON  `oloszenia1`.`uzytkownik` TO 'Joanna'@'localhost'
+
+odbieranie uprawnien
+
+REVOKE SELECT, INSERT, UPDATE ON  `oloszenia1`.`uzytkownik` FROM 'Joanna'@'localhost'
+
+GRANT SELECT(email, imie), INSERT(imie, nazwisko) ON oloszenia1.uzytkownik TO 'Joanna'@'localhost'
+
+show GRANTS FOR 'Joanna'@'localhost'

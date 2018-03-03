@@ -1,0 +1,8 @@
+zapytanie 1: SELECT COUNT(ID) FROM `sportowiec`;
+
+zapytanie 2: SELECT sportowiec.imie, sportowiec.nazwisko FROM sportowiec where id='1';
+
+zapytanie 3: SELECT AVG(`wynik`) FROM `wyniki` WHERE `dyscyplina_id`='3' AND `sportowiec_id`='1';
+
+zapytanie 4: SELECT MAX(`wynik`) FROM `wyniki` WHERE `dyscyplina_id`='3';
+		SELECT MAX(`wynik`) AS 'maksymaly wynik' FROM `wyniki` WHERE `dyscyplina_id`='3'

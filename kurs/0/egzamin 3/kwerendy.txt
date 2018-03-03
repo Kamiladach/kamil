@@ -1,0 +1,15 @@
+zapytanie 1: SELECT `imie`,`nazwisko` FROM `uczen`;
+
+zapytanie 2: SELECT `imie`,`nazwisko` FROM `uczen` WHERE id=2;
+
+zapytanie 3: SELECT `ocena`FROM `ocena` WHERE `przedmiot_id`=1 AND `uczen_id`=2;
+
+zapytanie 4: SELECT AVG(`ocena`) FROM `ocena` WHERE `przedmiot_id`=1 AND `uczen_id`=2;
+SELECT round(AVG(`ocena`),2) FROM `ocena` WHERE `przedmiot_id`=1 AND `uczen_id`=2;
+pokazuje 2 miejsca po przecinku.
+
+
+zapytanie dodatkowe:
+ SELECT ocena.ocena, uczen.imie, uczen.nazwisko FROM uczen INNER JOIN ocena ON uczen.id=ocena.uczen_id WHERE `przedmiot_id`=1 AND `uczen_id`=2 ORDER BY ocena DESC;
+
+SELECT round(AVG(ocena),2) AS 'Srednia ocena', ocena.przedmiot_id FROM `ocena` GROUP BY `przedmiot_id`

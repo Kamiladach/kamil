@@ -1,0 +1,5 @@
+zapytanie 1: SELECT `id`,`model`,`kolor` FROM `samochody`where `marka`='toyota' and `rocznik`='2014';
+
+zapytanie 2: SELECT `id`, `marka`, `model`, `rocznik` FROM `samochody`;
+
+zapytanie 3: SELECT samochody.id, samochody.model, zamowienia.telefon FROM `samochody` INNER JOIN zamowienia on samochody.id=zamowienia.id;
