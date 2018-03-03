@@ -17,7 +17,7 @@ echo "<br>";
 $imie = 'Kamil';
 const MIASTO = 'Poznan';
 const KRAJ = 'Polska';
-echo $imie."<br>".MIASTO."<br>".KRAJ."<br>";
+echo "Imie: ".$imie."<br>"."Miasto: ".MIASTO."<br>"."Kraj: ".KRAJ."<br>";
 //echo <<<T
 //$imie<br>MIASTO
 //T;
