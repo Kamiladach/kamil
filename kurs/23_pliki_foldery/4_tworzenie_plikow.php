@@ -10,9 +10,29 @@
   <form>
       <input type="text" name="folder">
       <input type="submit" name="przyciskF" value="Dodaj katalog">
-  </form><hr>
+      <p>Dodaj plik</p>
+      <input type="text" name="plik">
+      <input type="submit" name="przyciskP" value="Dodaj Plik">
+
+  </form><br><hr>
    <?php
     $dir = "./test";
+    #### usuwnie plikow
+    if (isset($_GET['usunP'])){
+        $usunP = $_GET['usunP'];
+        //echo $usunP;
+        if (file_exists($dir."/".$usunP))
+        unlink($dir."/".$usunP);
+    }
+    #### usuwanie Katologow
+
+    if (isset($_GET['usunK'])){
+        $usunK = $_GET['usunK'];
+        //echo $usunK;
+        if (file_exists($dir."/".$usunK))
+        rmdir($dir."/".$usunK);
+    }
+    // tworzenie katalogow
     if (isset($_GET['przyciskF']) && !empty($_GET['folder'])){
         $folder = $_GET['folder'];
        // echo "$folder";
@@ -22,8 +42,19 @@
         echo "<h4>Folder o nazwie $folder juz istnieje <br> podaj inna nazwe</h4>";
     }
     }
-
-
+    // tworzenie katalogow
+    if (isset($_GET['przyciskP']) && !empty($_GET['plik'])){
+        $plik = $_GET['plik'];
+    if (!file_exists($dir."/".$plik)){
+        $fd = fopen($dir."/".$plik, 'w');
+        if (file_exists($dir."/".$plik)){
+            echo "<h4>Dodano plik o nazwie: $plik</h4>";
+        }
+        fclose($fd);
+    }else{
+        echo "<h4>Plik o nazwie $plik juz istnieje <br> podaj inna nazwe</h4>";
+    }
+    }
 
     if (!($folder = opendir($dir))){
         exit("nie mozna otworzyc folderu");
@@ -56,25 +87,27 @@
                  rsort($katalogi);
              }
          }
+
+        #### wyswietlanie pliow
         echo "<p>Pliki</p>";
         echo "<ul>";
             foreach($pliki as $wartosc){
-                echo "<li>$wartosc</li>";
+                echo "<li>$wartosc <a href=\"4_tworzenie_plikow.php?usunP=$wartosc\">Usun</a></li>";
 
             }
         echo "</ul><hr>";
-
+        #### wyswietlanie katalow
         echo "<h3>Katalogi</h3>";
         echo "<ul>";
             foreach ($katalogi as $wartosc){
-                echo "<li>$wartosc</li>";
+                echo "<li>$wartosc <a href=\"4_tworzenie_plikow.php?usunK=$wartosc\">Usun</a></li>";
             }
         echo "</ul><hr>";
     }
 
 
     ?>
-    <a href="3_tworzenie_katalogow.php?sortuj=0">Sortu rosaco</a>
-    <a href="3_tworzenie_katalogow.php?sortuj=1">Sortu malejaco</a>
+    <a href="4_tworzenie_plikow.php?sortuj=0">Sortu rosaco</a>
+    <a href="4_tworzenie_plikow.php?sortuj=1">Sortu malejaco</a>
 </body>
 </html>
