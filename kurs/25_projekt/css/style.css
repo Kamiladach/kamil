@@ -1,0 +1,14 @@
+body {
+  width: 100%;
+}
+table, th, tr,td {
+  border: solid 1px #817878;
+  border-collapse: collapse;
+  padding: 15px;
+  text-align: center;
+}
+
+#dodaj {
+  width: 20%;
+  background-color: aquamarine;
+}
